@@ -1,69 +1,122 @@
 <!DOCTYPE html>
-<nav>
-<a href="#about">About</a>
-<a href="#timeline">Career Growth</a>
-<a href="#blog">Safety Insights</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Prasad | Safety Portfolio & Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin:0; padding:0;
+      background:#f7f9fc; color:#333;
+    }
+    header {
+      background:#004466; color:white;
+      padding:20px; text-align:center;
+    }
+    header h1 { margin:0; font-size:28px; }
+    nav { margin-top:10px; }
+    nav a {
+      color:white; margin:0 10px;
+      text-decoration:none; font-weight:bold;
+    }
+    .container {
+      max-width:1000px; margin:20px auto; padding:20px;
+    }
+    section { margin-bottom:40px; }
+    h2 {
+      border-bottom:2px solid #004466;
+      padding-bottom:5px; color:#004466;
+    }
+    .timeline { list-style:none; padding:0; }
+    .timeline li {
+      margin:15px 0; padding:10px;
+      background:#e6f2f5;
+      border-left:4px solid #004466;
+    }
+    .blog-post {
+      background:white;
+      padding:15px;
+      border-radius:8px;
+      margin:15px 0;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    } 
+    footer {
+      background:#004466; color:white;
+      text-align:center; padding:20px;
+    }
+    .contact a {
+      color:#004466;
+      font-weight:bold;
+      text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Sai Prasad</h1>
+    <p>TechIOSH | Health & Safety Practitioner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#timeline">Career Growth</a>
+      <a href="#blog">Safety Insights</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <div class="container">
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a Health & Safety practitioner specialising in ISO frameworks, audits, and contractor safety management. 
+        My goal is to make safety a driver of delivery, not a blocker. 
+        I combine field audits with data-driven insights to prevent incidents and improve compliance.
+      </p>
+    </section>
 
-<div class="container">
-<section id="about">
-<h2>About Me</h2>
-<p>I am a Health & Safety practitioner specialising in ISO frameworks, audits, and contractor safety management. My goal is to make safety a driver of delivery, not a blocker. I combine field audits with data-driven insights to prevent incidents and improve compliance.</p>
-</section>
+    <!-- Career Timeline -->
+    <section id="timeline">
+      <h2>Career Growth</h2>
+      <ul class="timeline">
+        <li><strong>2025</strong> – Completed ISO 45001 Lead Auditor training (CQI/IRCA approved, exam pending).</li>
+        <li><strong>2025</strong> – TechIOSH Membership (IOSH).</li>
+        <li><strong>2024</strong> – Safety Lead, Data Centre Construction (managed 180+ workers across 2 sites).</li>
+        <li><strong>2023</strong> – Diploma in Environmental Management (Alison).</li>
+      </ul>
+    </section>
 
+    <!-- Blog -->
+    <section id="blog">
+      <h2>Safety Insights</h2>
+      <div class="blog-post">
+        <h3>Top 5 Hazards in Construction Sites</h3>
+        <p>
+          Falls, struck-by objects, electrical hazards, scaffold safety, and improper PPE use remain the most common causes of accidents. 
+          A strong induction and daily inspection culture can significantly reduce risks.
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>What Auditors Look for in ISO 45001</h3>
+        <p>
+          Auditors focus on evidence of risk assessments, worker participation, leadership commitment, and continual improvement. 
+          Clear documentation and practical implementation are equally important.
+        </p>
+      </div>
+    </section>
 
-<section id="timeline">
-<h2>Career Growth</h2>
-<ul class="timeline">
-<li><strong>2025</strong> – Completed ISO 45001 Lead Auditor training (CQI/IRCA approved, exam pending).</li>
-<li><strong>2025</strong> – TechIOSH Membership (IOSH).</li>
-<li><strong>2024</strong> – Safety Lead, Data Centre Construction (managed 180+ workers across 2 sites).</li>
-<li><strong>2023</strong> – Diploma in Environmental Management (Alison).</li>
-</ul>
-</section>
-
-
-<section id="blog">
-<h2>Safety Insights</h2>
-<div class="blog-post">
-<h3>Top 5 Hazards in Construction Sites</h3>
-<p>Falls, struck-by objects, electrical hazards, scaffold safety, and improper PPE use remain the most common causes of accidents. A strong induction and daily inspection culture can significantly reduce risks.</p>
-</div>
-<div class="blog-post">
-<h3>What Auditors Look for in ISO 45001</h3>
-<p>Auditors focus on evidence of risk assessments, worker participation, leadership commitment, and continual improvement. Clear documentation and practical implementation are equally important.</p>
-</div>
-</section>
-
-
-<section id="projects">
-<h2>Key Projects</h2>
-<div class="blog-post">
-<h3>Data Centre Fit-Out (2024)</h3>
-<p>Managed H&S across two concurrent sites with ~180 workers. Delivered zero lost-time incidents, streamlined induction, and improved PPE compliance through focused toolbox talks.</p>
-</div>
-<div class="blog-post">
-<h3>AI-Assisted Safety Monitoring</h3>
-<p>Reviewed AI-flagged safety observations, validated against site footage, and helped reduce false positives while improving hazard response speed.</p>
-</div>
-</section>
-
-
-<section id="contact">
-<h2>Contact</h2>
-<p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-<p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/your-profile</a></p>
-<p><strong>Download CV:</strong> <a href="#">Click here</a></p>
-</section>
-</div>
-
-
-<footer>
-<p>© 2025 Sai Prasad | Health & Safety Portfolio</p>
-</footer>
-</body>
-</html>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Key Projects</h2>
+      <div class="blog-post">
+        <h3>Data Centre Fit-Out (2024)</h3>
+        <p>
+          Managed H&S across two concurrent sites with ~180 workers. 
+          Delivered zero lost-time incidents, streamlined induction, and improved PPE compliance through focused toolbox talks.
+        </p>
+      </div>
+      <div class="blog-post">
+        <h3>AI-Assisted Safety Monitoring</h3>
+        <
