@@ -6,102 +6,98 @@
   <title>Sai Prasad | Health & Safety Portfolio</title>
   <style>
     :root{
-      --nav:#1f2f3d; --nav-2:#2b4254; --ink:#12202a; --muted:#6c7a86;
-      --bg:#f5f7fb; --card:#ffffff; --line:#e6ecf2; --accent:#85c11a; --link:#1b89ff;
+      --nav:#1f2f3d;--ink:#12202a;--muted:#6c7a86;--bg:#f5f7fb;--card:#ffffff;
+      --line:#e6ecf2;--accent:#85c11a;--link:#1b89ff;--cta:#e63946;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
     a{color:var(--link);text-decoration:none}
-    a:hover{opacity:.92;text-decoration:underline}
+    a:hover{opacity:.95;text-decoration:underline}
 
-    /* Top nav */
-    .topbar{background:var(--nav);color:#fff}
-    .topbar .wrap{max-width:1200px;margin:0 auto;display:flex;gap:16px;
-      align-items:center;justify-content:space-between;padding:10px 16px}
-    .brand{display:flex;gap:10px;align-items:center}
-    .logo{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,#7dd3fc,#22d3ee);
-      display:grid;place-items:center;font-weight:800;color:#0b1c26}
-    .nav a{color:#dfe7ee;margin-left:18px;font-weight:600}
+    /* Navbar / Brand */
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:var(--nav);color:#fff;position:sticky;top:0;z-index:10}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{background:var(--accent);color:#0b1c26;font-weight:800;border-radius:12px;padding:10px 12px}
+    .brand-text .name{font-size:22px;font-weight:800;color:#fff;line-height:1}
+    .brand-text .role{font-size:16px;font-weight:600;color:#fff;white-space:nowrap;line-height:1.1}
+    .brand-text .tech{font-weight:800}
+    .nav-links a{color:#fff;margin-left:22px;font-weight:600}
 
-    /* Hero */
-    .hero{background:var(--nav-2);color:#eaf2f8;border-bottom:1px solid rgba(255,255,255,.1)}
-    .hero .wrap{max-width:1200px;margin:0 auto;padding:26px 16px}
-    .hero h1{margin:0 0 6px;font-size:28px}
-
-    /* Layout */
-    .wrap{max-width:1200px;margin:0 auto;padding:20px 16px}
+    /* Layout & cards */
+    .wrap{max-width:1200px;margin:0 auto;padding:22px 16px}
     .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px}
     @media (max-width:980px){.grid{grid-template-columns:1fr}}
-
-    /* Cards & bits */
-    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
-      box-shadow:0 8px 24px rgba(16,24,40,.06);padding:18px}
-    .card h2{margin:0 0 10px;font-size:22px;border-bottom:1px solid var(--line);
-      padding-bottom:8px;color:#243646}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,.06);padding:18px;margin-top:22px}
+    .card h2{margin:0 0 10px;font-size:24px;border-bottom:1px solid var(--line);padding-bottom:8px;color:#243646}
     .lead{font-size:17px;color:#3b4a58}
     .muted{color:var(--muted)}
-    .pill{display:inline-block;background:#eef4fb;border:1px solid var(--line);
-      padding:6px 10px;border-radius:999px;font-size:13px;color:#2c4050;margin:6px 6px 0 0}
+    .pill{display:inline-block;background:#eef4fb;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px;color:#2c4050;margin:6px 6px 0 0}
+
+    /* Lists / timeline */
     .list{padding-left:18px;margin:8px 0}
     .list li{margin:6px 0}
     .timeline{list-style:none;margin:0;padding:0}
-    .timeline li{position:relative;padding:10px 12px 10px 18px;border-left:3px solid var(--accent);
-      background:#f7fbef;margin:0 0 10px;border-radius:8px}
+    .timeline li{position:relative;padding:10px 12px 10px 18px;border-left:3px solid var(--accent);background:#f7fbef;margin:0 0 10px;border-radius:8px}
 
-    /* Aside & buttons */
-    .aside .box{background:#f1f7ff;border:1px solid #dfe9f6;border-radius:12px;padding:16px;margin-bottom:16px}
+    /* Certificates grid */
+    .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .cert{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(16,24,40,.06)}
+    .cert img{width:100%;height:160px;object-fit:cover;display:block}
+    .cert .meta{padding:12px}
+    .cert .meta h4{margin:0 0 6px;color:#1f2f3d;font-size:16px}
+    .cert .meta p{margin:0;color:#667788;font-size:14px}
+    .cert .meta a{display:inline-block;margin-top:8px}
+    @media (max-width:980px){.cert-grid{grid-template-columns:1fr}}
+
+    /* Buttons & side boxes */
     .btn{display:inline-block;padding:12px 14px;border-radius:10px;font-weight:700;border:1px solid #d3dee9;background:#fff;color:#1b3a55}
     .btn.primary{background:linear-gradient(135deg,#a8e063,#56ab2f);color:#093b1a;border:0}
-    .btn.full{display:block;text-align:center}
+    .aside .card{padding-bottom:12px}
 
-    /* Footer */
-    .footer{background:var(--nav);color:#c9d6e2}
+    /* Subscribe + footer */
+    .subscribe{background:#dff1c6;border-top:1px solid #cfe6af;margin-top:24px}
+    .subscribe .wrap{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .footer{background:var(--nav);color:#c9d6e2;margin-top:0}
     .footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:18px}
     .footer a{color:#e5eef7}
     @media (max-width:980px){.footer .wrap{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <!-- Top navigation -->
-  <div class="topbar">
-    <div class="wrap">
-      <div class="brand">
-        <div class="logo">SP</div>
-        <div>
-          <strong>Sai Prasad</strong><br>
-          <span class="muted">TechIOSH • Health & Safety Practitioner</span>
-        </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="brand">
+      <div class="logo">SP</div>
+      <div class="brand-text">
+        <span class="name">Sai Prasad</span><br>
+        <span class="role"><span class="tech">TechIOSH</span> • Health &amp; Safety Practitioner</span>
       </div>
-      <div class="nav">
-        <a href="#about">About</a>
-        <a href="#journey">Journey</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#insights">Insights</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#goals">Goals</a>
-        <a href="#contact">Contact</a>
-      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#insights">Insights</a>
+      <a href="#certs">Certificates</a>
+      <a href="#goals">Goals</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 
-  <!-- Hero -->
-  <div class="hero">
-    <div class="wrap">
-      <h1>Health & Safety that enables delivery — not delays it.</h1>
-      <p>Portfolio, journey, and safety insights by Sai Prasad.</p>
-    </div>
-  </div>
-
-  <!-- Main -->
+  <!-- MAIN -->
   <div class="wrap">
     <div class="grid">
       <main>
         <!-- About -->
         <section id="about" class="card">
           <h2>About</h2>
-          <!-- Optional image (add later): <img src="profile.jpg" alt="Sai Prasad" style="width:160px;border-radius:50%;float:right;margin:0 0 10px 16px"> -->
-          <p class="lead">I’m a Health & Safety practitioner with a Mechanical Engineering foundation and experience across power, construction, and remote digital safety. I focus on building simple, robust systems people actually use—turning safety from a checklist into a culture of <strong>collective responsibility</strong>.</p>
+          <!-- Optional: upload profile.jpg and uncomment next line -->
+          <!-- <img src="profile.jpg" alt="Sai Prasad" style="width:160px;border-radius:50%;float:right;margin:0 0 10px 16px"> -->
+          <p class="lead">
+            I’m a Health &amp; Safety practitioner with a Mechanical Engineering foundation and experience across power,
+            construction, and remote digital safety. I build simple, robust systems people actually use, turning safety
+            from a checklist into a culture of <strong>collective responsibility</strong>.
+          </p>
           <div>
             <span class="pill">TechIOSH</span>
             <span class="pill">IOSH Managing Safely (2021)</span>
@@ -113,14 +109,32 @@
         <!-- Journey -->
         <section id="journey" class="card">
           <h2>My Journey</h2>
-          <p><strong>2018–2019:</strong> Refinery internship sparked interest; Diploma in Industrial Safety alongside Mechanical Engineering.</p>
-          <p><strong>2020:</strong> NEBOSH IGC (first attempt), first role as Safety Officer in Thermal Power Plant. Work interrupted by COVID-19.</p>
-          <p><strong>2021–2023:</strong> Shankar Electricals — promoted to Lead Safety, responsible for 180+ workers, received Best Performer award. Completed IOSH Managing Safely.</p>
-          <p><strong>2023–May 2025:</strong> Contract & remote roles — created safety procedures, trained workers, validated AI safety observations and performed digital risk assessments.</p>
-          <p><strong>June 2025–Present:</strong> Relocated to the UK (13 June 2025). Achieved TechIOSH; aligned with UK standards (COSHH, HSWA 1974, ISO 45001). CPDs: Environmental Management, Behaviour-Based Safety, Sustainability (UKAF).</p>
+          <p><strong>2018–2019 — Mechanical Engineering (Foundation)</strong><br>
+            Internship at a Refinery Port introduced me to industrial safety. Researching incidents like <em>Piper Alpha</em>
+            sparked a lasting interest. I completed a <strong>Diploma in Industrial Safety</strong> alongside my degree.</p>
+
+          <p><strong>2020 — NEBOSH &amp; first site role</strong><br>
+            Mentored by Mr. Anees, I pursued <strong>NEBOSH IGC</strong> and passed on my first attempt (Feb 2020).
+            I joined a <strong>Thermal Power Plant</strong> as Safety Officer—gaining practical experience before COVID-19 halted work.</p>
+
+          <p><strong>2021–2023 — Shankar Electricals (major growth)</strong><br>
+            Deployed to a <strong>Data Centre construction</strong> project in Mumbai. After two months my senior resigned and I took full responsibility,
+            eventually leading safety for ~<strong>180+ workers</strong>. I halted unsafe lifts (e.g., a 7.4-ton transformer with an uninspected crane; a night tower-crane drum lift with damaged slings)
+            and reset permit discipline. Earned <strong>Best Performer</strong> and later handled <strong>five projects</strong>.</p>
+
+          <p><strong>2023–May 2025 — Contract &amp; remote roles</strong><br>
+            On a 3-month contract I built procedures, ran worker assessments, and issued online certifications.
+            Later I supported a remote program validating <strong>AI-captured safety observations</strong> and performing <strong>digital risk assessments</strong>.</p>
+
+          <p><strong>June 2025–Present — UK transition &amp; CPD</strong><br>
+            Moved to the UK on <strong>13 June 2025</strong> and aligned with UK standards: <strong>COSHH</strong>, <strong>HSWA 1974</strong>, and
+            <strong>ISO 45001 (Lead Auditor training)</strong>. Achieved <strong>TechIOSH</strong>. 2025 CPDs include:
+            <em>Diploma in Environmental Management</em>, <em>Behaviour-Based Safety</em>, and
+            <em>Environmental Management &amp; Sustainability (UKAF)</em>.
+          </p>
         </section>
 
-        <!-- Quick Timeline -->
+        <!-- Timeline -->
         <section id="timeline" class="card">
           <h2>Quick Timeline</h2>
           <ul class="timeline">
@@ -128,47 +142,76 @@
             <li><strong>2020:</strong> NEBOSH IGC (first attempt); Thermal Power Plant Safety Officer.</li>
             <li><strong>2021:</strong> IOSH Managing Safely.</li>
             <li><strong>2021–2023:</strong> Shankar Electricals — Lead Safety, 180+ workers, Best Performer.</li>
-            <li><strong>2023–May 2025:</strong> Contract & Remote roles.</li>
+            <li><strong>2023–May 2025:</strong> Contract &amp; Remote roles — procedures, AI risk assessments.</li>
             <li><strong>13 June 2025:</strong> Relocated to the UK.</li>
-            <li><strong>2025–Present:</strong> TechIOSH; ISO 45001 Lead Auditor (training); CPDs in Environmental Management, BBS, Sustainability (UKAF).</li>
+            <li><strong>2025–Present:</strong> TechIOSH; ISO 45001 Lead Auditor (training); CPDs: Env. Management, BBS, Sustainability (UKAF).</li>
           </ul>
         </section>
 
-        <!-- Safety Insights -->
+        <!-- Insights -->
         <section id="insights" class="card">
           <h2>Safety Insights</h2>
-          <h3>Evolution of Safety Culture</h3>
-          <p>From the Industrial Revolution—unguarded machines, poor ventilation, no PPE—to today’s integrated systems, safety has become a core business value and a driver of reliability, productivity, and trust.</p>
+          <h3>The growth of safety: from industry to modern era</h3>
+          <p>Safety evolved from minimal protections during the Industrial Revolution to today’s integrated systems.
+             Organisations now recognise safety as an <strong>investment</strong> in people, reliability, and delivery—not a cost.</p>
 
-          <h3>Shifting Hazards Across Eras</h3>
+          <h3>Hazards then vs now</h3>
           <ul class="list">
-            <li><strong>Industrial Age:</strong> explosions, fires, child labour, lack of training.</li>
-            <li><strong>20th Century:</strong> asbestos, chemical exposure, construction accidents, electrical risks.</li>
-            <li><strong>Modern Era:</strong> psychosocial stress, ergonomic injuries, occupational disease, climate-related risks, and digital/AI safety concerns.</li>
+            <li><strong>Then:</strong> poorly guarded machinery, explosions, poor ventilation, child labour, no PPE.</li>
+            <li><strong>Now:</strong> chemical exposure &amp; COSHH control, electrical &amp; fire, ergonomics, psychosocial stress, digital fatigue, and risks from automation/AI.</li>
           </ul>
 
-          <h3>Global Disparities</h3>
-          <p>While some nations enforce strict regulations, others still treat safety as secondary—leading to preventable incidents. Safety must be a <strong>universal standard</strong>, not a privilege.</p>
-
-          <h3>Collective Responsibility</h3>
-          <p>Real progress happens when leadership sets the vision, supervisors enforce discipline, designers build with safety in mind, and workers engage with ownership. Safety is not compliance alone—it is culture.</p>
+          <h3>Global gap &amp; collective responsibility</h3>
+          <p>In some regions, weak enforcement means safety is still treated as optional—leading to preventable incidents.
+             Sustainable improvement comes when <strong>everyone</strong> accepts duty of care: workers, supervisors, designers, suppliers, and leadership.</p>
         </section>
 
-        <!-- Case Studies -->
-        <section id="case-studies" class="card">
-          <h2>Case Studies</h2>
-
-          <h3>⚠️ <a href="https://en.wikipedia.org/wiki/Piper_Alpha" target="_blank" rel="noopener">Piper Alpha (1988)</a></h3>
-          <p>The North Sea oil platform disaster highlighted the catastrophic consequences of poor permit-to-work systems and inadequate emergency preparedness. It reshaped offshore safety regulations worldwide. <a href="https://en.wikipedia.org/wiki/Piper_Alpha" target="_blank" rel="noopener">Read more →</a></p>
-
-          <h3>☣️ <a href="https://en.wikipedia.org/wiki/Bhopal_disaster" target="_blank" rel="noopener">Bhopal Gas Tragedy (1984)</a></h3>
-          <p>One of the world’s worst industrial disasters, caused by a toxic gas leak in India, revealed how weak maintenance, training, and corporate responsibility can devastate entire communities. <a href="https://en.wikipedia.org/wiki/Bhopal_disaster" target="_blank" rel="noopener">Read more →</a></p>
-
-          <h3>🏗️ <a href="https://en.wikipedia.org/wiki/2013_Savar_building_collapse" target="_blank" rel="noopener">Rana Plaza Collapse (2013)</a></h3>
-          <p>The garment factory collapse in Bangladesh showed the cost of ignoring structural safety and prioritising deadlines over worker welfare. It accelerated global supply-chain audits and ethical sourcing. <a href="https://en.wikipedia.org/wiki/2013_Savar_building_collapse" target="_blank" rel="noopener">Read more →</a></p>
-
-          <h3>🔥 <a href="https://en.wikipedia.org/wiki/Grenfell_Tower_fire" target="_blank" rel="noopener">Grenfell Tower Fire (2017)</a></h3>
-          <p>The UK high-rise fire exposed gaps in fire safety regulations, cladding standards, and emergency planning—leading to significant building-safety reforms. <a href="https://en.wikipedia.org/wiki/Grenfell_Tower_fire" target="_blank" rel="noopener">Read more →</a></p>
+        <!-- Certificates -->
+        <section id="certs" class="card">
+          <h2>Certificates</h2>
+          <p class="muted">Upload files to a <code>certs/</code> folder (and thumbnails to <code>certs/thumbs/</code>), then update the links below.</p>
+          <div class="cert-grid">
+            <div class="cert">
+              <img src="certs/thumbs/iso45001.jpg" alt="ISO 45001 Lead Auditor (training)">
+              <div class="meta">
+                <h4>ISO 45001 Lead Auditor (Training)</h4>
+                <p>CQI/IRCA-approved course</p>
+                <a href="certs/iso45001.pdf" target="_blank" rel="noopener">View certificate →</a>
+              </div>
+            </div>
+            <div class="cert">
+              <img src="certs/thumbs/iosh.jpg" alt="IOSH Managing Safely">
+              <div class="meta">
+                <h4>IOSH Managing Safely</h4>
+                <p>Completed: 2021</p>
+                <a href="certs/iosh-managing-safely.pdf" target="_blank" rel="noopener">View certificate →</a>
+              </div>
+            </div>
+            <div class="cert">
+              <img src="certs/thumbs/cpd-env.jpg" alt="Diploma in Environmental Management (CPD)">
+              <div class="meta">
+                <h4>Diploma in Environmental Management (CPD)</h4>
+                <p>Completed: 2025</p>
+                <a href="certs/diploma-environmental-management.pdf" target="_blank" rel="noopener">View certificate →</a>
+              </div>
+            </div>
+            <div class="cert">
+              <img src="certs/thumbs/cpd-bbs.jpg" alt="Behaviour-Based Safety (CPD)">
+              <div class="meta">
+                <h4>Behaviour-Based Safety (CPD)</h4>
+                <p>Completed: 2025</p>
+                <a href="certs/behaviour-based-safety.pdf" target="_blank" rel="noopener">View certificate →</a>
+              </div>
+            </div>
+            <div class="cert">
+              <img src="certs/thumbs/ukaf.jpg" alt="Environmental Management & Sustainability (UKAF)">
+              <div class="meta">
+                <h4>Environmental Management &amp; Sustainability (UKAF)</h4>
+                <p>Completed: 2025</p>
+                <a href="certs/environmental-management-sustainability-ukaf.pdf" target="_blank" rel="noopener">View certificate →</a>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Goals -->
@@ -178,7 +221,7 @@
             <li>🎓 NEBOSH International Diploma (IDip)</li>
             <li>🎓 Master’s in Risk Analysis</li>
             <li>🎯 CMIOSH (Chartered) pathway</li>
-            <li>🎯 CSP & RSP</li>
+            <li>🎯 CSP &amp; RSP</li>
             <li>🌍 Contribute to global worker safety with the ILO</li>
           </ul>
         </section>
@@ -186,46 +229,64 @@
         <!-- Contact -->
         <section id="contact" class="card">
           <h2>Contact</h2>
-          <p class="lead">Let’s connect for opportunities, audits, or collaborations.</p>
-          <p>
-            <strong>Phone:</strong> <a href="tel:+447404613322">+44 7404 613322</a><br>
-            <strong>Email:</strong> <a href="mailto:sai.prasad617@gmail.com">sai.prasad617@gmail.com</a><br>
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370" target="_blank" rel="noopener">linkedin.com/in/saiprasad-p-m-techiosh-308408370</a>
-          </p>
+          <p class="lead">Let’s connect for roles, audits, or collaborations.</p>
+          <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+             <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/your-profile</a></p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-            <a class="btn primary" href="cv.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
-            <a class="btn" href="cv.pdf" download>Download CV</a>
+            <a class="btn primary" href="#">Download CV (PDF)</a>
+            <a class="btn" href="#">Book a call</a>
           </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section id="case-studies" class="card">
+          <h2>Case Studies</h2>
+          <h3>⚠️ <a href="https://en.wikipedia.org/wiki/Piper_Alpha" target="_blank" rel="noopener">Piper Alpha (1988)</a></h3>
+          <p>The North Sea oil platform disaster highlighted the catastrophic consequences of poor permit-to-work systems and inadequate emergency preparedness. It reshaped offshore safety regulations worldwide. <a href="https://en.wikipedia.org/wiki/Piper_Alpha" target="_blank" rel="noopener">Read more →</a></p>
+          <h3>☣️ <a href="https://en.wikipedia.org/wiki/Bhopal_disaster" target="_blank" rel="noopener">Bhopal Gas Tragedy (1984)</a></h3>
+          <p>One of the world’s worst industrial disasters, caused by a toxic gas leak in India, revealed how weak maintenance, training, and corporate responsibility can devastate entire communities. <a href="https://en.wikipedia.org/wiki/Bhopal_disaster" target="_blank" rel="noopener">Read more →</a></p>
+          <h3>🏗️ <a href="https://en.wikipedia.org/wiki/2013_Savar_building_collapse" target="_blank" rel="noopener">Rana Plaza Collapse (2013)</a></h3>
+          <p>The garment factory collapse in Bangladesh demonstrated the dangers of ignoring structural safety and the human cost of prioritising deadlines over worker welfare. It accelerated global supply chain audits and ethical sourcing initiatives. <a href="https://en.wikipedia.org/wiki/2013_Savar_building_collapse" target="_blank" rel="noopener">Read more →</a></p>
+          <h3>🔥 <a href="https://en.wikipedia.org/wiki/Grenfell_Tower_fire" target="_blank" rel="noopener">Grenfell Tower Fire (2017)</a></h3>
+          <p>The UK high-rise fire exposed gaps in fire safety regulations, cladding standards, and emergency response planning—leading to significant reforms in building safety legislation. <a href="https://en.wikipedia.org/wiki/Grenfell_Tower_fire" target="_blank" rel="noopener">Read more →</a></p>
         </section>
       </main>
 
       <!-- Sidebar -->
       <aside class="aside">
-        <div class="box">
+        <div class="card">
           <strong>Available for:</strong>
           <ul class="list" style="margin-top:6px">
-            <li>Health & Safety roles (UK/EU)</li>
-            <li>Site audits & inspections</li>
-            <li>Permit to Work & RAMS reviews</li>
+            <li>Health &amp; Safety roles (UK/EU)</li>
+            <li>Site audits &amp; inspections</li>
+            <li>Permit to Work &amp; RAMS reviews</li>
           </ul>
-          <a class="btn full primary" href="#contact">Contact Sai</a>
+          <a class="btn" style="margin-top:6px" href="#contact">Contact Sai</a>
         </div>
-        <div class="box">
+        <div class="card">
           <strong>Downloads</strong>
           <ul class="list">
-            <li><a href="cv.pdf" target="_blank" rel="noopener">Open CV — PDF</a></li>
-            <li><a href="cv.pdf" download>Download CV</a></li>
+            <li><a href="#">CV — 2 pages (PDF)</a></li>
+            <li><a href="#">Sample toolbox talk</a></li>
           </ul>
         </div>
-        <div class="box">
+        <div class="card">
           <strong>Quick links</strong>
           <ul class="list">
             <li><a href="#timeline">Career timeline</a></li>
             <li><a href="#insights">Safety insights</a></li>
-            <li><a href="#case-studies">Case studies</a></li>
+            <li><a href="#goals">Future goals</a></li>
           </ul>
         </div>
       </aside>
+    </div>
+  </div>
+
+  <!-- Subscribe strip -->
+  <div class="subscribe">
+    <div class="wrap">
+      <p class="lead" style="margin:12px 0">Get occasional safety notes (BBS, COSHH, ISO tips).</p>
+      <a class="btn primary" href="#">Subscribe</a>
     </div>
   </div>
 
@@ -237,12 +298,25 @@
         <p class="muted">© 2025 Sai Prasad</p>
       </div>
       <div>
+        <strong>Portfolio</strong>
+        <ul class="list">
+          <li><a href="#journey">My journey</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#insights">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Documents</strong>
+        <ul class="list">
+          <li><a href="#">CV (PDF)</a></li>
+          <li><a href="#">Project log</a></li>
+        </ul>
+      </div>
+      <div>
         <strong>Contact</strong>
         <ul class="list">
-          <li><a href="tel:+447404613322">+44 7404 613322</a></li>
-          <li><a href="mailto:sai.prasad617@gmail.com">sai.prasad617@gmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="cv.pdf" target="_blank" rel="noopener">Open CV</a></li>
+          <li><a href="mailto:your.email@example.com">Email me</a></li>
+          <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
     </div>
