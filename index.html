@@ -25,10 +25,10 @@
   .brand .tag{font-size:16px;color:#dce7f1}
   .nav a{color:#fff;margin-left:22px;font-weight:600;font-size:16px}
 
-  /* Hero (compact with only buttons) */
+  /* Hero */
   .hero{background:linear-gradient(180deg,#0f2533 0%, #173141 100%);color:#e9f3fb}
-  .hero .wrap{width:100%;padding:16px 40px} /* reduced height */
-  .cta{display:flex;gap:10px;flex-wrap:wrap;margin:0}
+  .hero .wrap{width:100%;padding:20px 40px}
+  .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
   .btn{display:inline-block;background:#fff;color:#0b2432;border:1px solid #d8e5f1;padding:10px 14px;border-radius:10px;font-weight:700}
   .btn.primary{background:linear-gradient(135deg,#9be15d,#52b36c);border:0;color:#0c2b1f}
 
@@ -40,10 +40,10 @@
   /* Cards */
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 28px rgba(17,24,39,.06);padding:20px;margin-bottom:24px}
   .card h3{margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:8px}
-  .lead{font-size:18px;line-height:1.7}
-  .section-split{margin:16px 0;border:0;border-top:1px solid var(--line)}
+  .lead{font-size:16px;line-height:1.7}
+  ul{padding-left:20px;margin:8px 0}
 
-  /* Timeline (Journey) */
+  /* Timeline */
   .tl{list-style:none;margin:0;padding:0 0 0 14px;position:relative}
   .tl::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:#cfe0ee}
   .tl-item{position:relative;margin:0 0 16px 0;padding-left:14px}
@@ -80,7 +80,7 @@
   </div>
 </div>
 
-<!-- HERO (buttons only) -->
+<!-- HERO -->
 <header class="hero">
   <div class="wrap">
     <div class="cta">
@@ -88,8 +88,7 @@
       <a class="btn" href="mailto:sai.prasad617@gmail.com">Email</a>
       <a class="btn" href="tel:+447404613322">Call</a>
       <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">LinkedIn</a>
-      <a class="btn" target="_blank" rel="noopener" href="/cv/cv.pdf">View CV</a>
-      <a class="btn" href="/cv/cv.pdf" download>Download CV</a>
+      <a class="btn" target="_blank" rel="noopener" href="cv.pdf">View CV</a>
     </div>
   </div>
 </header>
@@ -98,24 +97,33 @@
 <main class="wrap">
   <div class="grid">
     <section>
-      <!-- ABOUT (your narrative) -->
+      <!-- ABOUT -->
       <div class="card" id="about">
         <h3>My Journey in Safety</h3>
-        <p>My path into safety wasn’t planned — it was discovered. During the final year of my Mechanical Engineering degree, I had the opportunity to do an internship at a refinery port. That was the first time I came across the role of safety officers in industry, and I was instantly drawn to it. Around that time, I studied case histories such as the Piper Alpha disaster, which opened my eyes to the catastrophic impact of poor safety practices. It inspired me to pursue further knowledge, so alongside my degree, I also completed a Diploma in Industrial Safety.</p>
-
-        <p>After graduation, I wasn’t sure how to take the first step until a mentor introduced me to NEBOSH IGC. With his encouragement, I enrolled, completed the training in early 2020, and passed both papers on my first attempt. Shortly afterwards, I began my career as a Safety Officer at a thermal power plant project. The role was highly demanding — new contractors daily, cultural and language barriers, and the pressure of being a contractor’s safety officer. But it gave me raw, practical exposure to real site challenges.</p>
-
-        <p>The pandemic disrupted my early career, but I returned determined. I joined Shankar Electricals as a Safety Officer on a large-scale data centre project in Mumbai. Initially, I was assisting a senior safety in-charge, but within two months he resigned, handing over all responsibilities to me. At just two months into the role, I found myself leading site safety independently.</p>
-
-        <p>It wasn’t easy. I had to stand firm against unsafe practices — once refusing an unplanned 7.4-ton transformer unloading with an uncertified crane, and another time stopping a night-time lifting operation with damaged slings. In both cases, I had to defend my decisions against management pressure, but I knew compromise would mean risking lives. Eventually, my persistence built trust with both the workforce and management, and I was promoted to Lead Safety Officer, handling multiple sites. I reduced risks and incidents significantly, and was proud to be recognised as Best Safety Performer.</p>
-
-        <p>After completing five projects there, I moved on. I later worked on a short-term contract as a Safety Engineer, where I introduced structured safety assessments, online certifications for workers, and new safety procedures for a small workforce. I also gained unique experience in a remote role, validating AI-detected safety violations and carrying out digital risk assessments — blending technology with traditional safety practices. Recently, I relocated to the UK, where my wife works as a mental health nurse. Since then, I’ve focused on aligning my safety knowledge with UK standards, completing CPD activities in COSHH, HSWA 1974, and ISO 45001, and upgrading my membership to TechIOSH. I also completed my ISO 45001 Lead Auditor training (CQI/IRCA approved, exam pending) to strengthen my auditing and compliance expertise.</p>
-
-        <p>For me, safety is not just a profession — it’s a commitment. Every role, every project, and every training I take is part of a bigger mission: to make workplaces safer, healthier, and more resilient, no matter the industry or location.</p>
+        <p class="lead">
+          My path into safety wasn’t planned — it was discovered. During the final year of my Mechanical Engineering degree, I had the opportunity to do an internship at a refinery port. That was the first time I came across the role of safety officers in industry, and I was instantly drawn to it. Around that time, I studied case histories such as the Piper Alpha disaster, which opened my eyes to the catastrophic impact of poor safety practices. It inspired me to pursue further knowledge, so alongside my degree, I also completed a Diploma in Industrial Safety.
+        </p>
+        <p class="lead">
+          After graduation, I wasn’t sure how to take the first step until a mentor introduced me to NEBOSH IGC. With his encouragement, I enrolled, completed the training in early 2020, and passed. Shortly afterwards, I began my career as a Safety Officer at a thermal power plant project. The role was highly demanding — new contractors daily, cultural and language barriers, and the pressure of being a contractor’s safety officer. But it gave me raw, practical exposure to real site challenges.
+        </p>
+        <p class="lead">
+          The pandemic disrupted my early career, but I returned determined. I joined Shankar Electricals as a Safety Officer on a large-scale data centre project in Mumbai. Initially, I was assisting a senior safety in-charge, but within two months he resigned, handing over all responsibilities to me. At just two months into the role, I found myself leading site safety independently.
+        </p>
+        <p class="lead">
+          It wasn’t easy. I had to stand firm against unsafe practices — once refusing an unplanned 7.4-ton transformer unloading with an uncertified crane, and another time stopping a night-time lifting operation with damaged slings. In both cases, I had to defend my decisions against management pressure, but I knew compromise would mean risking lives. Eventually, my persistence built trust with both the workforce and management, and I was promoted to Lead Safety Officer, handling multiple sites. I reduced risks and incidents significantly, and was proud to be recognised as Best Safety Performer.
+        </p>
+        <p class="lead">
+          After completing five projects there, I moved on. I later worked on a short-term contract as a Safety Engineer, where I introduced structured safety assessments, online certifications for workers, and new safety procedures for a small workforce. I also gained unique experience in a remote role, validating AI-detected safety violations and carrying out digital risk assessments — blending technology with traditional safety practices.
+        </p>
+        <p class="lead">
+          Recently, I relocated to the UK, where my wife works as a mental health nurse. Since then, I’ve focused on aligning my safety knowledge with UK standards, completing CPD activities in COSHH, HSWA 1974, and ISO 45001, and upgrading my membership to TechIOSH. I also completed my ISO 45001 Lead Auditor (CQI/IRCA approved) to strengthen my auditing and compliance expertise.
+        </p>
+        <p class="lead">
+          For me, safety is not just a profession — it’s a commitment. Every role, every project, and every training I take is part of a bigger mission: to make workplaces safer, healthier, and more resilient, no matter the industry or location.
+        </p>
 
         <hr class="section-split" />
 
-        <!-- Certifications bullet list -->
         <h4>Certifications</h4>
         <ul>
           <li>NEBOSH IGC</li>
@@ -124,19 +132,16 @@
           <li>Diploma in Industrial Safety</li>
           <li>Diploma in Environmental Management (CPD)</li>
           <li>Behaviour-Based Safety (CPD)</li>
-          <li>Environmental Management &amp; Sustainability (UKAF)</li>
+          <li>Environmental Mgmt &amp; Sustainability (UKAF)</li>
           <li>B.Tech — Mechanical Engineering</li>
         </ul>
 
-        <hr class="section-split" />
-
-        <!-- Core skills bullet list -->
         <h4>Core Skills</h4>
         <ul>
           <li>Risk Assessment (HIRA/JSA)</li>
           <li>RAMS / Method Statements</li>
-          <li>Permit to Work (PTW)</li>
-          <li>Incident &amp; Non-Conformance Investigation</li>
+          <li>Permit to Work</li>
+          <li>Incident &amp; NC Investigation</li>
           <li>Site Audits &amp; Inspections</li>
           <li>Toolbox Talks &amp; Training</li>
           <li>Contractor Management</li>
@@ -150,32 +155,32 @@
         <ul class="tl">
           <li class="tl-item">
             <time>2025–Present</time>
-            <p>Moved to the UK (13 Jun). Achieved <strong>TechIOSH</strong>. Continued CPD: Diploma in Environmental Management (CPD), BBS (CPD), Environmental Mgmt &amp; Sustainability (UKAF). ISO 45001 Lead Auditor.</p>
+            <p>Moved to the UK (13 Jun). Achieved <strong>TechIOSH</strong>. Continued CPD: ISO 45001 LA, Diploma in Environmental Management (CPD), BBS (CPD), Environmental Mgmt &amp; Sustainability (UKAF).</p>
           </li>
           <li class="tl-item">
             <time>2023–May 2025</time>
-            <p>Short-term contracts as a <strong>Safety Engineer</strong> and <strong>Safety Consultant</strong> (remote). Delivered procedures, worker assessments, online certifications; validated AI-detected safety issues and performed digital risk reviews.</p>
+            <p>Worked in short-term contracts as a Safety Engineer and as a Safety Consultant in AI-based safety (remote).</p>
           </li>
           <li class="tl-item">
             <time>2021–2023</time>
-            <p>Worked as <strong>Safety Lead</strong>, managed multiple projects simultaneously, and was awarded <strong>Best Performer</strong>.</p>
+            <p>Worked as Safety Lead on data-centre projects, managed multiple sites simultaneously, and was awarded <strong>Best Performer</strong>.</p>
           </li>
           <li class="tl-item">
             <time>2021</time>
-            <p><strong>IOSH Managing Safely</strong>.</p>
+            <p>Completed <strong>IOSH Managing Safely</strong>.</p>
           </li>
           <li class="tl-item">
             <time>2020</time>
-            <p><strong>NEBOSH IGC</strong>. First role as Safety Officer on a thermal power project.</p>
+            <p><strong>NEBOSH IGC</strong>. First role as Safety Officer on a thermal power project; gained strong on-site experience.</p>
           </li>
           <li class="tl-item">
             <time>2019</time>
-            <p>Diploma in Industrial Safety completed alongside <strong>B.Tech — Mechanical Engineering</strong>. Refinery internship and case studies like <em>Piper Alpha</em> shaped my interest.</p>
+            <p>Diploma in Industrial Safety completed alongside <strong>B.Tech — Mechanical Engineering</strong>. Internship at a refinery sparked interest; case studies like <em>Piper Alpha</em> shaped my approach.</p>
           </li>
         </ul>
       </div>
 
-      <!-- INSIGHTS (unchanged) -->
+      <!-- INSIGHTS -->
       <div class="card" id="insights">
         <h3>Safety Insights</h3>
         <ul>
@@ -189,7 +194,7 @@
         </ul>
       </div>
 
-      <!-- GOALS (unchanged) -->
+      <!-- GOALS -->
       <div class="card" id="goals">
         <h3>Future Goals</h3>
         <ul>
@@ -210,20 +215,16 @@
           <li><strong>Email:</strong> <a href="mailto:sai.prasad617@gmail.com">sai.prasad617@gmail.com</a></li>
           <li><strong>Phone:</strong> <a href="tel:+447404613322">+44 7404 613322</a></li>
           <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">linkedin.com/in/saiprasad-p-m-techiosh-308408370</a></li>
+          <li><a class="btn" target="_blank" rel="noopener" href="cv.pdf">Download/View CV</a></li>
         </ul>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
-          <a class="btn" target="_blank" rel="noopener" href="/cv/cv.pdf">View CV</a>
-          <a class="btn" href="/cv/cv.pdf" download>Download CV</a>
-        </div>
       </div>
 
       <div class="card">
-        <h3>Seeking roles</h3>
+        <h3>Seeking Opportunities</h3>
         <ul>
-          <li>Health &amp; Safety roles (UK/EU)</li>
-          <li>Site audits &amp; inspections</li>
-          <li>PTW &amp; RAMS reviews</li>
-          <li>Toolbox talks &amp; inductions</li>
+          <li>Actively seeking Health &amp; Safety roles (UK/EU)</li>
+          <li>Open to site audits, inspections &amp; compliance reviews</li>
+          <li>Interested in PTW, RAMS, and contractor safety management</li>
         </ul>
       </div>
     </aside>
@@ -238,7 +239,7 @@
       <a href="mailto:sai.prasad617@gmail.com">Email</a> ·
       <a href="tel:+447404613322">Call</a> ·
       <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">LinkedIn</a> ·
-      <a target="_blank" rel="noopener" href="/cv/cv.pdf">CV</a>
+      <a target="_blank" rel="noopener" href="cv.pdf">CV</a>
     </div>
   </div>
 </footer>
