@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sai Prasad • TechIOSH | Health & Safety</title>
 <meta name="description" content="Sai Prasad (TechIOSH) — Health & Safety practitioner with 4+ years’ experience. Risk assessment, RAMS, PTW, audits, investigations. Now in the UK." />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
   :root{
     --bg:#f6f8fb; --ink:#14212b; --muted:#647488; --line:#e6ecf2;
@@ -16,39 +15,45 @@
     font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
+
   /* Top nav */
   .nav{position:sticky;top:0;z-index:20;background:var(--nav);color:#fff}
-  .nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 16px}
+  .nav .wrap{width:100%;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 40px}
   .brand{display:flex;align-items:center;gap:12px}
-  .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#9be15d,#00e3ae);display:grid;place-items:center;color:#0a2230;font-weight:800}
-  .brand h1{font-size:20px;margin:0;line-height:1}
-  .brand .tag{font-size:13px;color:#dce7f1}
-  .nav a{color:#fff;margin-left:18px;font-weight:600}
-  /* Hero */
+  .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#9be15d,#00e3ae);display:grid;place-items:center;color:#0a2230;font-weight:800;font-size:18px}
+  .brand h1{font-size:28px;margin:0;line-height:1}
+  .brand .tag{font-size:16px;color:#dce7f1}
+  .nav a{color:#fff;margin-left:22px;font-weight:600;font-size:16px}
+
+  /* Hero (compact with only buttons) */
   .hero{background:linear-gradient(180deg,#0f2533 0%, #173141 100%);color:#e9f3fb}
-  .hero .wrap{max-width:1100px;margin:0 auto;padding:40px 16px 26px}
-  .kicker{display:inline-block;background:#0e384d;border:1px solid #215069;color:#cfe9ff;padding:4px 10px;border-radius:999px;font-size:12px}
-  .hero h2{margin:10px 0 6px;font-size:32px;line-height:1.15}
-  .subtitle{margin:0;color:#b7c7d6}
-  .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .hero .wrap{width:100%;padding:16px 40px} /* reduced height */
+  .cta{display:flex;gap:10px;flex-wrap:wrap;margin:0}
   .btn{display:inline-block;background:#fff;color:#0b2432;border:1px solid #d8e5f1;padding:10px 14px;border-radius:10px;font-weight:700}
   .btn.primary{background:linear-gradient(135deg,#9be15d,#52b36c);border:0;color:#0c2b1f}
+
   /* Layout */
-  .wrap{max-width:1100px;margin:0 auto;padding:18px 16px}
+  .wrap{width:100%;margin:0 auto;padding:24px 40px}
   .grid{display:grid;grid-template-columns:2fr 1fr;gap:22px}
   @media (max-width:980px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 28px rgba(17,24,39,.06);padding:18px}
+
+  /* Cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 28px rgba(17,24,39,.06);padding:20px;margin-bottom:24px}
   .card h3{margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:8px}
   .lead{font-size:18px;line-height:1.7}
-  .pill{display:inline-block;background:#eef4fb;border:1px solid var(--line);padding:6px 12px;margin:4px;border-radius:999px;font-size:14px;color:#223645}
-  .section-split{margin:18px 0;border:0;border-top:1px solid var(--line)}
-  ul{padding-left:20px;margin:8px 0}
-  /* Contact block */
-  .contact li{list-style:none;margin:6px 0}
-  .contact a{word-break:break-all}
+  .section-split{margin:16px 0;border:0;border-top:1px solid var(--line)}
+
+  /* Timeline (Journey) */
+  .tl{list-style:none;margin:0;padding:0 0 0 14px;position:relative}
+  .tl::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:#cfe0ee}
+  .tl-item{position:relative;margin:0 0 16px 0;padding-left:14px}
+  .tl-item::before{content:"";position:absolute;left:-2px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px #eef6e6}
+  .tl-item time{display:inline-block;font-weight:800;color:#0f2533;margin-bottom:4px}
+  .tl-item p{margin:4px 0 0}
+
   /* Footer */
   .footer{background:var(--nav);color:#cfe0ee;margin-top:20px}
-  .footer .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px}
+  .footer .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 40px}
   .footer a{color:#eaf4ff}
 </style>
 </head>
@@ -60,7 +65,7 @@
     <div class="brand">
       <div class="logo">SP</div>
       <div>
-        <h1 style="margin:0">Sai Prasad</h1>
+        <h1>Sai Prasad</h1>
         <div class="tag">TechIOSH • Health &amp; Safety Practitioner</div>
       </div>
     </div>
@@ -75,17 +80,16 @@
   </div>
 </div>
 
-<!-- HERO -->
+<!-- HERO (buttons only) -->
 <header class="hero">
   <div class="wrap">
-    <span class="kicker">Safety first, delivery always</span>
-    <h2>Simple, practical safety that people actually use.</h2>
-    <p class="subtitle">4+ years in India • Now UK-based • Risk, RAMS, PTW, audits &amp; investigations</p>
     <div class="cta">
       <a class="btn primary" href="#contact">Contact me</a>
       <a class="btn" href="mailto:sai.prasad617@gmail.com">Email</a>
       <a class="btn" href="tel:+447404613322">Call</a>
       <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">LinkedIn</a>
+      <a class="btn" target="_blank" rel="noopener" href="/cv/cv.pdf">View CV</a>
+      <a class="btn" href="/cv/cv.pdf" download>Download CV</a>
     </div>
   </div>
 </header>
@@ -94,69 +98,89 @@
 <main class="wrap">
   <div class="grid">
     <section>
-      <!-- ABOUT -->
+      <!-- ABOUT (your narrative) -->
       <div class="card" id="about">
-        <h3>About</h3>
-        <p class="lead">
-          Health &amp; Safety practitioner, <strong>TechIOSH</strong> member with
-          <strong>4+ years’ experience</strong> (India) — now based in the <strong>UK</strong>.
-          I keep safety simple, practical, and reliable on live projects.
-        </p>
+        <h3>My Journey in Safety</h3>
+        <p>My path into safety wasn’t planned — it was discovered. During the final year of my Mechanical Engineering degree, I had the opportunity to do an internship at a refinery port. That was the first time I came across the role of safety officers in industry, and I was instantly drawn to it. Around that time, I studied case histories such as the Piper Alpha disaster, which opened my eyes to the catastrophic impact of poor safety practices. It inspired me to pursue further knowledge, so alongside my degree, I also completed a Diploma in Industrial Safety.</p>
+
+        <p>After graduation, I wasn’t sure how to take the first step until a mentor introduced me to NEBOSH IGC. With his encouragement, I enrolled, completed the training in early 2020, and passed both papers on my first attempt. Shortly afterwards, I began my career as a Safety Officer at a thermal power plant project. The role was highly demanding — new contractors daily, cultural and language barriers, and the pressure of being a contractor’s safety officer. But it gave me raw, practical exposure to real site challenges.</p>
+
+        <p>The pandemic disrupted my early career, but I returned determined. I joined Shankar Electricals as a Safety Officer on a large-scale data centre project in Mumbai. Initially, I was assisting a senior safety in-charge, but within two months he resigned, handing over all responsibilities to me. At just two months into the role, I found myself leading site safety independently.</p>
+
+        <p>It wasn’t easy. I had to stand firm against unsafe practices — once refusing an unplanned 7.4-ton transformer unloading with an uncertified crane, and another time stopping a night-time lifting operation with damaged slings. In both cases, I had to defend my decisions against management pressure, but I knew compromise would mean risking lives. Eventually, my persistence built trust with both the workforce and management, and I was promoted to Lead Safety Officer, handling multiple sites. I reduced risks and incidents significantly, and was proud to be recognised as Best Safety Performer.</p>
+
+        <p>After completing five projects there, I moved on. I later worked on a short-term contract as a Safety Engineer, where I introduced structured safety assessments, online certifications for workers, and new safety procedures for a small workforce. I also gained unique experience in a remote role, validating AI-detected safety violations and carrying out digital risk assessments — blending technology with traditional safety practices. Recently, I relocated to the UK, where my wife works as a mental health nurse. Since then, I’ve focused on aligning my safety knowledge with UK standards, completing CPD activities in COSHH, HSWA 1974, and ISO 45001, and upgrading my membership to TechIOSH. I also completed my ISO 45001 Lead Auditor training (CQI/IRCA approved, exam pending) to strengthen my auditing and compliance expertise.</p>
+
+        <p>For me, safety is not just a profession — it’s a commitment. Every role, every project, and every training I take is part of a bigger mission: to make workplaces safer, healthier, and more resilient, no matter the industry or location.</p>
 
         <hr class="section-split" />
 
-        <h4 style="margin:0 0 8px">Certifications &amp; Education</h4>
-        <div>
-          <span class="pill">NEBOSH IGC</span>
-          <span class="pill">IOSH Managing Safely (2021)</span>
-          <span class="pill">ISO 45001 Lead Auditor (training)</span>
-          <span class="pill">Diploma in Industrial Safety</span>
-          <span class="pill">Diploma in Environmental Management (CPD)</span>
-          <span class="pill">Behaviour-Based Safety (CPD)</span>
-          <span class="pill">Environmental Mgmt &amp; Sustainability (UKAF)</span>
-          <span class="pill">B.Tech — Mechanical Engineering</span>
-        </div>
-
-        <hr class="section-split" />
-
-        <h4 style="margin:0 0 8px">Core Skills</h4>
-        <div>
-          <span class="pill">Risk Assessment (HIRA/JSA)</span>
-          <span class="pill">RAMS / Method Statements</span>
-          <span class="pill">Permit to Work</span>
-          <span class="pill">Incident &amp; NC Investigation</span>
-          <span class="pill">Site Audits &amp; Inspections</span>
-          <span class="pill">Toolbox Talks &amp; Training</span>
-          <span class="pill">Contractor Management</span>
-          <span class="pill">COSHH &amp; Fire Safety</span>
-        </div>
-      </div>
-
-      <!-- JOURNEY -->
-      <div class="card" id="journey">
-        <h3>My Journey</h3>
-        <p>Started during Mechanical Engineering with a refinery internship and case studies like Piper Alpha. Completed a Diploma in Industrial Safety and <strong>NEBOSH IGC (2020)</strong>, then worked across power and construction. Took charge of a data-centre build (≈180 workers), stopped unsafe lifts, improved PTW &amp; RAMS discipline, and earned Best Performer. 2023–2025 included contract roles and remote AI-based risk reviews. Moved to the UK on <strong>13 June 2025</strong> and aligned with UK standards via CPD.</p>
-      </div>
-
-      <!-- TIMELINE -->
-      <div class="card" id="timeline">
-        <h3>Timeline</h3>
+        <!-- Certifications bullet list -->
+        <h4>Certifications</h4>
         <ul>
-          <li><strong>2025–Present:</strong> UK move; TechIOSH; ISO 45001 LA (training); CPDs in Env. Mgmt, BBS, UKAF.</li>
-          <li><strong>2023–May 2025:</strong> Contract &amp; remote roles — procedures, worker assessment, AI risk review.</li>
-          <li><strong>2021–2023:</strong> Data-centre construction — lead safety for ≈180 workers; Best Performer.</li>
-          <li><strong>2021:</strong> IOSH Managing Safely.</li>
-          <li><strong>2020:</strong> NEBOSH IGC; thermal power project.</li>
-          <li><strong>2019:</strong> Diploma in Industrial Safety; Mechanical Engineering.</li>
+          <li>NEBOSH IGC</li>
+          <li>IOSH Managing Safely (2021)</li>
+          <li>ISO 45001 Lead Auditor</li>
+          <li>Diploma in Industrial Safety</li>
+          <li>Diploma in Environmental Management (CPD)</li>
+          <li>Behaviour-Based Safety (CPD)</li>
+          <li>Environmental Management &amp; Sustainability (UKAF)</li>
+          <li>B.Tech — Mechanical Engineering</li>
+        </ul>
+
+        <hr class="section-split" />
+
+        <!-- Core skills bullet list -->
+        <h4>Core Skills</h4>
+        <ul>
+          <li>Risk Assessment (HIRA/JSA)</li>
+          <li>RAMS / Method Statements</li>
+          <li>Permit to Work (PTW)</li>
+          <li>Incident &amp; Non-Conformance Investigation</li>
+          <li>Site Audits &amp; Inspections</li>
+          <li>Toolbox Talks &amp; Training</li>
+          <li>Contractor Management</li>
+          <li>COSHH &amp; Fire Safety</li>
         </ul>
       </div>
 
-      <!-- INSIGHTS -->
+      <!-- JOURNEY (Timeline format) -->
+      <div class="card" id="journey">
+        <h3>Career Timeline</h3>
+        <ul class="tl">
+          <li class="tl-item">
+            <time>2025–Present</time>
+            <p>Moved to the UK (13 Jun). Achieved <strong>TechIOSH</strong>. Continued CPD: Diploma in Environmental Management (CPD), BBS (CPD), Environmental Mgmt &amp; Sustainability (UKAF). ISO 45001 Lead Auditor.</p>
+          </li>
+          <li class="tl-item">
+            <time>2023–May 2025</time>
+            <p>Short-term contracts as a <strong>Safety Engineer</strong> and <strong>Safety Consultant</strong> (remote). Delivered procedures, worker assessments, online certifications; validated AI-detected safety issues and performed digital risk reviews.</p>
+          </li>
+          <li class="tl-item">
+            <time>2021–2023</time>
+            <p>Worked as <strong>Safety Lead</strong>, managed multiple projects simultaneously, and was awarded <strong>Best Performer</strong>.</p>
+          </li>
+          <li class="tl-item">
+            <time>2021</time>
+            <p><strong>IOSH Managing Safely</strong>.</p>
+          </li>
+          <li class="tl-item">
+            <time>2020</time>
+            <p><strong>NEBOSH IGC</strong>. First role as Safety Officer on a thermal power project.</p>
+          </li>
+          <li class="tl-item">
+            <time>2019</time>
+            <p>Diploma in Industrial Safety completed alongside <strong>B.Tech — Mechanical Engineering</strong>. Refinery internship and case studies like <em>Piper Alpha</em> shaped my interest.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- INSIGHTS (unchanged) -->
       <div class="card" id="insights">
         <h3>Safety Insights</h3>
         <ul>
           <li><strong>People over paperwork:</strong> forms don’t save lives—habits do.</li>
-          <li><strong>Risk is dynamic:</strong> re-check at handovers and when scope or conditions change.</li>
+          <li><strong>Risk is dynamic:</strong> re-check at handovers and when scope/conditions change.</li>
           <li><strong>Permission to stop work:</strong> anyone can pause if unsure—no blame.</li>
           <li><strong>Weak signals matter:</strong> near-misses and small deviations are early warnings.</li>
           <li><strong>Eliminate before PPE:</strong> design-out hazards; keep solutions simple.</li>
@@ -165,7 +189,7 @@
         </ul>
       </div>
 
-      <!-- GOALS -->
+      <!-- GOALS (unchanged) -->
       <div class="card" id="goals">
         <h3>Future Goals</h3>
         <ul>
@@ -180,19 +204,21 @@
 
     <!-- SIDEBAR -->
     <aside>
-      <div class="card">
+      <div class="card" id="contact">
         <h3>Contact</h3>
         <ul class="contact" style="padding-left:0">
           <li><strong>Email:</strong> <a href="mailto:sai.prasad617@gmail.com">sai.prasad617@gmail.com</a></li>
           <li><strong>Phone:</strong> <a href="tel:+447404613322">+44 7404 613322</a></li>
           <li><strong>LinkedIn:</strong> <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">linkedin.com/in/saiprasad-p-m-techiosh-308408370</a></li>
         </ul>
-        <!-- If you upload a CV, put it at /cv/cv.pdf and uncomment below -->
-        <!-- <a class="btn" style="margin-top:6px" href="/cv/cv.pdf" target="_blank" rel="noopener">View CV (PDF)</a> -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+          <a class="btn" target="_blank" rel="noopener" href="/cv/cv.pdf">View CV</a>
+          <a class="btn" href="/cv/cv.pdf" download>Download CV</a>
+        </div>
       </div>
 
       <div class="card">
-        <h3>Available for</h3>
+        <h3>Seeking roles</h3>
         <ul>
           <li>Health &amp; Safety roles (UK/EU)</li>
           <li>Site audits &amp; inspections</li>
@@ -211,7 +237,8 @@
     <div>
       <a href="mailto:sai.prasad617@gmail.com">Email</a> ·
       <a href="tel:+447404613322">Call</a> ·
-      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">LinkedIn</a>
+      <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/saiprasad-p-m-techiosh-308408370">LinkedIn</a> ·
+      <a target="_blank" rel="noopener" href="/cv/cv.pdf">CV</a>
     </div>
   </div>
 </footer>
